@@ -29,6 +29,12 @@ export class Provider extends Component {
         email: "kurtovic.emir@gmail.com",
         phone: "0644002619",
       },
+      {
+        id: 5,
+        name: "Anes Kurtovic",
+        email: "kurtovic.anes@gmail.com",
+        phone: "0644004619",
+      },
     ],
   };
   render() {
