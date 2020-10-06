@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Contacts from "./components/contacts/Contacts";
 import AddContact from "./components/contacts/AddContact";
+import EditContact from "./components/contacts/EditContacts";
 import Header from "./components/layout/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "./context";
@@ -22,6 +23,12 @@ class App extends React.Component {
                 <Route exact path="/" component={Contacts}></Route>
                 <Route exact path="/about" component={About}></Route>
                 <Route exact path="/contact/add" component={AddContact}></Route>
+                <Route
+                  exact
+                  path="/contact/edit/:id"
+                  component={EditContact}
+                ></Route>
+
                 <Route component={NotFound}></Route>
               </Switch>
             </div>
