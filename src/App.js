@@ -6,7 +6,7 @@ import EditContact from "./components/contacts/EditContacts";
 import Header from "./components/layout/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "./context";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Contact from "./components/contacts/Contact";
 import About from "./components/Pages/About";
 import NotFound from "./components/Pages/NotFound";
@@ -15,7 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div className="App">
             <Header />
             <div className="container">
